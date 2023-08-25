@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Flights</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>All Flights</h1>
+    <ul>
+      <% flights.forEach(flight => { %>
+        <li>
+          Airline: <%= flight.airline %><br>
+          Airport: <%= flight.airport %><br>
+          Flight No.: <%= flight.flightNo %><br>
+          Departs: <%= flight.departs.toLocaleString() %>
+          <a href="/flights/<%= flight._id %>">Detail</a>
+        </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
